@@ -1,0 +1,149 @@
+@import "abstracts/variables";
+
+html {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: $default;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  background-color: $Very-Light-Gray;
+}
+
+main {
+  padding: 0 2rem;
+}
+
+header {
+  padding: 5rem 0;
+  text-align: center;
+  color: $Very-Dark-Blue;
+
+  h2 {
+    margin-bottom: 1rem;
+    // color: $Very-Dark-Blue;
+    font-weight: 400;
+    
+    span {
+      color: initial;
+      font-weight: 600;
+    }
+  }
+
+  p {
+    // font-size: 1.6rem;
+    font-weight: 200;
+  }
+}
+
+.cards {
+  .card {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: -5px 5px 10px rgba(24, 95, 109, 0.2);
+
+    & > .content {
+      padding: 2rem 0rem 3rem 2rem;
+      line-height: 1.6;
+
+      // h2{
+
+      // }
+
+      p {
+        font-weight: 200;
+        color: $Very-Dark-Blue;
+        margin-top: .5rem;
+      }
+    }
+
+    div.image {
+      text-align: right;
+      padding-bottom: 1rem;
+      margin-right: 1.5rem;
+    }
+
+    margin-bottom: 2.5rem;
+
+    &-supervisor {
+      border-top: 5px solid $Cyan;
+    }
+
+    &-team_builder {
+      border-top: 5px solid $Red;
+    }
+
+    &-karma {
+      border-top: 5px solid $Orange;
+    }
+
+    &-calculator {
+      border-top: 5px solid $Blue;
+    }
+  }
+}
+
+// footer
+.attribution {
+  font-size: 1.3rem;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+// media query
+
+@media only screen and (min-width: 768px) {
+  header{
+    h2{
+      font-size: 2.5rem;
+    }
+    p{
+      width: 60%;
+      margin: 0 auto;
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  header{
+    h2{
+      font-size: 3rem;
+    }
+   
+  }
+  .cards {
+    display: flex;
+    align-items: center;
+
+    & > :not(:last-child) {
+      margin-right: 2rem;
+    }
+
+    .card {
+      max-width: 37rem;
+    }
+  }
+}
+
+@media only screen and (min-width:1024px){
+  header{
+    
+    p{
+      width: 45%;
+      margin: 0 auto;
+    }
+  }
+}
